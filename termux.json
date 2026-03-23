@@ -330,12 +330,6 @@
     "usage": "!50"
   },
   {
-    "command": "CTRL + R",
-    "description": "Pencarian riwayat perintah secara interaktif mundur (reverse-i-search).",
-    "category": "History Management",
-    "usage": "Tekan CTRL+R di terminal"
-  },
-  {
     "command": "ps",
     "description": "Menampilkan status proses yang sedang berjalan pada pengguna saat ini.",
     "category": "Process Management",
@@ -454,6 +448,54 @@
     "description": "Mengakses atau mengelola crontab milik pengguna lain (butuh root).",
     "category": "Task Scheduling",
     "usage": "crontab -u [user] -l"
+  },
+  {
+    "command": "ssh [user]@[host]",
+    "description": "Melakukan koneksi jarak jauh (remote) ke server menggunakan protokol Secure Shell.",
+    "category": "Networking / SSH",
+    "usage": "ssh user@192.168.1.1"
+  },
+  {
+    "command": "ssh -p [port]",
+    "description": "Melakukan koneksi SSH menggunakan nomor port kustom (default adalah 22).",
+    "category": "Networking / SSH",
+    "usage": "ssh -p 2222 user@host"
+  },
+  {
+    "command": "ssh -i [key]",
+    "description": "Melakukan koneksi SSH menggunakan file kunci privat (Private Key) untuk autentikasi.",
+    "category": "Networking / SSH",
+    "usage": "ssh -i ~/.ssh/id_rsa user@host"
+  },
+  {
+    "command": "ssh -L",
+    "description": "Melakukan Local Port Forwarding (meneruskan port dari remote ke local).",
+    "category": "Networking / SSH",
+    "usage": "ssh -L 8080:localhost:80 user@host"
+  },
+  {
+    "command": "ssh -D",
+    "description": "Membuat SOCKS Proxy dinamis untuk tunneling lalu lintas web melalui server remote.",
+    "category": "Networking / SSH",
+    "usage": "ssh -D 1080 user@host"
+  },
+  {
+    "command": "ssh -v",
+    "description": "Menjalankan SSH dalam mode Verbose untuk melihat rincian proses debug koneksi.",
+    "category": "Networking / SSH",
+    "usage": "ssh -v user@host"
+  },
+  {
+    "command": "ssh-keygen",
+    "description": "Membuat pasangan kunci SSH baru (Public Key & Private Key).",
+    "category": "Networking / SSH",
+    "usage": "ssh-keygen -t rsa -b 4096"
+  },
+  {
+    "command": "ssh-copy-id",
+    "description": "Menyalin Public Key ke server remote agar bisa login tanpa password.",
+    "category": "Networking / SSH",
+    "usage": "ssh-copy-id user@host"
   },
   {
     "command": "termux-setup-storage",
@@ -622,5 +664,77 @@
     "description": "Menguji koneksi jaringan ke alamat host tujuan.",
     "category": "Networking",
     "usage": "ping [host]"
+  },
+  {
+    "command": "CTRL + C",
+    "description": "Mengirim sinyal SIGINT untuk menghentikan paksa (abort) proses yang sedang berjalan di terminal.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan C"
+  },
+  {
+    "command": "CTRL + Z",
+    "description": "Mengirim sinyal SIGTSTP untuk menunda (suspend) proses yang sedang berjalan ke latar belakang.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan Z"
+  },
+  {
+    "command": "CTRL + D",
+    "description": "Mengirim sinyal EOF (End Of File) untuk keluar dari sesi shell saat ini atau logout.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan D"
+  },
+  {
+    "command": "CTRL + L",
+    "description": "Shortcut cepat untuk membersihkan layar terminal (sama dengan perintah 'clear').",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan L"
+  },
+  {
+    "command": "CTRL + R",
+    "description": "Memulai pencarian interaktif riwayat perintah ke belakang (reverse search).",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan R"
+  },
+  {
+    "command": "CTRL + A",
+    "description": "Memindahkan kursor secara instan ke awal baris perintah yang sedang diketik.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan A"
+  },
+  {
+    "command": "CTRL + E",
+    "description": "Memindahkan kursor secara instan ke akhir baris perintah yang sedang diketik.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan E"
+  },
+  {
+    "command": "CTRL + U",
+    "description": "Menghapus seluruh teks dari posisi kursor saat ini hingga ke awal baris.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan U"
+  },
+  {
+    "command": "CTRL + K",
+    "description": "Menghapus seluruh teks dari posisi kursor saat ini hingga ke akhir baris.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan K"
+  },
+  {
+    "command": "CTRL + W",
+    "description": "Menghapus satu kata tepat sebelum posisi kursor saat ini.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tahan CTRL lalu tekan W"
+  },
+  {
+    "command": "TAB",
+    "description": "Otomatis melengkapi (autocomplete) nama perintah, file, atau direktori yang sedang diketik.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tekan tombol TAB"
+  },
+  {
+    "command": "ESC + [n]",
+    "description": "Mengakses baris perintah spesifik dengan navigasi cepat (tergantung konfigurasi terminal).",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tekan ESC lalu angka"
   }
 ]
