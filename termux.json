@@ -1,0 +1,62 @@
+[
+  {
+    "command": "pkg help",
+    "description": "Menampilkan bantuan untuk manajer paket Termux.",
+    "category": "Package Management",
+    "usage": "pkg help"
+  },
+  {
+    "command": "pkg upgrade",
+    "description": "Memperbarui semua paket yang terinstal ke versi terbaru.",
+    "category": "Package Management",
+    "usage": "pkg upgrade"
+  },
+  {
+    "command": "termux-setup-storage",
+    "description": "Memberikan akses penyimpanan internal ponsel ke Termux.",
+    "category": "System",
+    "usage": "termux-setup-storage"
+  },
+  {
+    "command": "apt update",
+    "description": "Sinkronisasi indeks paket dari repositori.",
+    "category": "Package Management",
+    "usage": "apt update"
+  },
+  {
+    "command": "ls",
+    "description": "Menampilkan daftar file dan direktori.",
+    "category": "Navigation",
+    "usage": "ls -la"
+  },
+  {
+    "command": "cd",
+    "description": "Berpindah direktori kerja.",
+    "category": "Navigation",
+    "usage": "cd [nama_folder]"
+  },
+  {
+    "command": "top",
+    "description": "Menampilkan proses sistem yang sedang berjalan secara real-time.",
+    "category": "System",
+    "usage": "top"
+  },
+  {
+    "command": "whoami",
+    "description": "Menampilkan nama user yang sedang login.",
+    "category": "System",
+    "usage": "whoami"
+  },
+  {
+    "command": "ifconfig",
+    "description": "Melihat konfigurasi antarmuka jaringan (IP, MAC, dll).",
+    "category": "Network",
+    "usage": "ifconfig"
+  },
+  {
+    "command": "ping",
+    "description": "Menguji konektivitas jaringan ke host tertentu.",
+    "category": "Network",
+    "usage": "ping google.com"
+  }
+]
