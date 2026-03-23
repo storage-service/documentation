@@ -1,740 +1,824 @@
 [
   {
     "command": "pkg help",
-    "description": "Menampilkan ringkasan bantuan dan daftar sub-perintah untuk manajer paket Termux.",
+    "description": "Menampilkan ringkasan bantuan dan daftar sub-perintah yang tersedia untuk manajer paket Termux (pkg).",
     "category": "Package Management",
     "usage": "pkg help"
   },
   {
     "command": "pkg install",
-    "description": "Mengunduh dan menginstal paket baru dari repositori resmi.",
+    "description": "Mengunduh dan menginstal satu atau lebih paket baru dari repositori resmi Termux ke perangkat Anda.",
     "category": "Package Management",
     "usage": "pkg install [nama_paket]"
   },
   {
     "command": "pkg uninstall",
-    "description": "Menghapus paket yang terinstal dari sistem.",
+    "description": "Menghapus paket yang sudah terinstal dari sistem Termux untuk membebaskan ruang penyimpanan.",
     "category": "Package Management",
     "usage": "pkg uninstall [nama_paket]"
   },
   {
     "command": "pkg reinstall",
-    "description": "Menginstal ulang paket yang mungkin rusak atau kehilangan komponen filenya.",
+    "description": "Menginstal ulang paket yang mungkin rusak, mengalami error, atau kehilangan komponen filenya agar kembali normal.",
     "category": "Package Management",
     "usage": "pkg reinstall [nama_paket]"
   },
   {
     "command": "pkg update",
-    "description": "Memperbarui daftar paket yang tersedia dari repositori.",
+    "description": "Memperbarui daftar indeks paket lokal agar sistem mengetahui versi terbaru dari paket yang tersedia di repositori.",
     "category": "Package Management",
     "usage": "pkg update"
   },
   {
     "command": "pkg upgrade",
-    "description": "Memperbarui semua paket yang terinstal ke versi terbaru yang tersedia.",
+    "description": "Memperbarui semua paket yang saat ini terinstal di Termux ke versi terbaru yang tersedia di server.",
     "category": "Package Management",
     "usage": "pkg upgrade"
   },
   {
     "command": "pkg search",
-    "description": "Mencari paket tertentu berdasarkan nama atau kata kunci deskripsi.",
+    "description": "Mencari paket tertentu di dalam repositori berdasarkan nama paket atau kata kunci dalam deskripsi paket tersebut.",
     "category": "Package Management",
     "usage": "pkg search [query]"
   },
   {
     "command": "pkg show",
-    "description": "Menampilkan informasi detail tentang paket tertentu (versi, ukuran, dependensi).",
+    "description": "Menampilkan informasi mendetail tentang sebuah paket, termasuk versi, ukuran unduhan, dan daftar dependensinya.",
     "category": "Package Management",
     "usage": "pkg show [nama_paket]"
   },
   {
     "command": "pkg list-all",
-    "description": "Menampilkan daftar seluruh paket yang tersedia di dalam repositori Termux.",
+    "description": "Menampilkan daftar seluruh paket yang tersedia di dalam repositori resmi Termux (sangat banyak).",
     "category": "Package Management",
     "usage": "pkg list-all"
   },
   {
     "command": "pkg list-installed",
-    "description": "Menampilkan daftar semua paket yang saat ini sudah terinstal di sistem.",
+    "description": "Menampilkan daftar semua paket yang saat ini sudah terinstal secara aktif di sistem Termux Anda.",
     "category": "Package Management",
     "usage": "pkg list-installed"
   },
   {
     "command": "pkg files",
-    "description": "Menampilkan daftar lokasi semua file yang terkait dengan paket tertentu.",
+    "description": "Menampilkan daftar lokasi absolut dari semua file yang telah dipasang oleh paket tertentu di sistem.",
     "category": "Package Management",
     "usage": "pkg files [nama_paket]"
   },
   {
     "command": "pkg clean",
-    "description": "Menghapus file cache instalasi (.deb) untuk menghemat ruang penyimpanan.",
+    "description": "Menghapus file cache instalasi (.deb) yang tersimpan di penyimpanan lokal setelah proses instalasi selesai.",
     "category": "Package Management",
     "usage": "pkg clean"
   },
   {
     "command": "pkg autoremove",
-    "description": "Menghapus paket dependensi yang sudah tidak diperlukan lagi oleh sistem.",
+    "description": "Secara otomatis mendeteksi dan menghapus paket dependensi yang sudah tidak diperlukan lagi oleh aplikasi lain.",
     "category": "Package Management",
     "usage": "pkg autoremove"
   },
   {
     "command": "apt update",
-    "description": "Sinkronisasi indeks paket lokal dengan repositori server APT.",
+    "description": "Perintah dasar Advanced Package Tool untuk menyelaraskan database paket lokal dengan repositori server.",
     "category": "APT Management",
     "usage": "apt update"
   },
   {
     "command": "apt upgrade",
-    "description": "Memperbarui paket terinstal tanpa menghapus paket yang sudah ada.",
+    "description": "Memperbarui paket-paket yang terinstal ke versi baru tanpa menghapus paket lama (kecuali diperlukan).",
     "category": "APT Management",
     "usage": "apt upgrade"
   },
   {
     "command": "apt full-upgrade",
-    "description": "Memperbarui sistem sepenuhnya dan menangani perubahan dependensi secara cerdas.",
+    "description": "Memperbarui sistem sepenuhnya dan menangani perubahan dependensi, termasuk menghapus paket jika diperlukan untuk upgrade.",
     "category": "APT Management",
     "usage": "apt full-upgrade"
   },
   {
     "command": "apt install",
-    "description": "Menginstal satu atau lebih paket melalui manajer paket APT.",
+    "description": "Perintah APT untuk menginstal paket. Mendukung instalasi beberapa paket sekaligus dalam satu baris perintah.",
     "category": "APT Management",
-    "usage": "apt install [paket]"
+    "usage": "apt install [paket1] [paket2]"
   },
   {
     "command": "apt remove",
-    "description": "Menghapus paket tetapi tetap menyimpan file konfigurasi aplikasi.",
+    "description": "Menghapus paket biner dari sistem namun tetap membiarkan file konfigurasi pengguna tetap ada.",
     "category": "APT Management",
     "usage": "apt remove [nama_paket]"
   },
   {
     "command": "apt purge",
-    "description": "Menghapus paket beserta seluruh file konfigurasi secara total.",
+    "description": "Menghapus paket secara menyeluruh, termasuk menghapus file konfigurasi aplikasi dari sistem.",
     "category": "APT Management",
     "usage": "apt purge [nama_paket]"
   },
   {
     "command": "apt autoremove",
-    "description": "Menghapus paket otomatis yang diinstal sebagai dependensi namun tidak lagi digunakan.",
+    "description": "Membersihkan dependensi yatim piatu yang tertinggal setelah penghapusan paket utama.",
     "category": "APT Management",
     "usage": "apt autoremove"
   },
   {
     "command": "apt search",
-    "description": "Mencari paket di dalam database APT menggunakan kata kunci.",
+    "description": "Mencari paket di database APT menggunakan pola atau kata kunci tertentu secara cepat.",
     "category": "APT Management",
     "usage": "apt search [query]"
   },
   {
     "command": "apt show",
-    "description": "Menampilkan deskripsi lengkap dan informasi teknis sebuah paket APT.",
+    "description": "Menampilkan catatan deskripsi lengkap, pemelihara, dan informasi dependensi teknis sebuah paket APT.",
     "category": "APT Management",
     "usage": "apt show [nama_paket]"
   },
   {
     "command": "apt list --upgradable",
-    "description": "Menampilkan daftar paket yang memiliki versi pembaruan yang tersedia.",
+    "description": "Menyaring dan menampilkan hanya paket-paket yang saat ini memiliki versi pembaruan di server.",
     "category": "APT Management",
     "usage": "apt list --upgradable"
   },
   {
     "command": "apt list --installed",
-    "description": "Menampilkan semua paket yang terinstal melalui APT.",
+    "description": "Menampilkan semua paket yang saat ini terinstal di sistem melalui manajer paket APT.",
     "category": "APT Management",
     "usage": "apt list --installed"
   },
   {
     "command": "apt edit-sources",
-    "description": "Membuka editor teks untuk mengubah daftar repositori paket (sources.list).",
+    "description": "Membuka editor teks default untuk memodifikasi file sources.list yang berisi daftar alamat repositori.",
     "category": "APT Management",
     "usage": "apt edit-sources"
   },
   {
     "command": "ls",
-    "description": "Menampilkan daftar file dan direktori dalam folder saat ini.",
+    "description": "Perintah standar untuk menampilkan daftar file dan direktori yang ada di dalam folder kerja saat ini.",
     "category": "File Navigation",
     "usage": "ls"
   },
   {
     "command": "ls -l",
-    "description": "Menampilkan daftar file dengan format panjang (detail izin, pemilik, dan ukuran).",
+    "description": "Menampilkan daftar file dalam format panjang, mencakup izin file, pemilik, ukuran, dan tanggal modifikasi.",
     "category": "File Navigation",
     "usage": "ls -l"
   },
   {
     "command": "ls -a",
-    "description": "Menampilkan semua file termasuk file tersembunyi (diawali titik).",
+    "description": "Menampilkan semua entri termasuk file dan direktori tersembunyi (yang namanya diawali dengan titik).",
     "category": "File Navigation",
     "usage": "ls -a"
   },
   {
     "command": "ls -la",
-    "description": "Kombinasi detail panjang dan menampilkan file tersembunyi.",
+    "description": "Kombinasi opsi -l dan -a untuk melihat detail lengkap dari seluruh file termasuk yang tersembunyi.",
     "category": "File Navigation",
     "usage": "ls -la"
   },
   {
     "command": "ls -lh",
-    "description": "Menampilkan ukuran file dalam format yang mudah dibaca manusia (KB, MB, GB).",
+    "description": "Sama seperti -l, tetapi ukuran file ditampilkan dalam format yang mudah dibaca manusia (seperti KB, MB, GB).",
     "category": "File Navigation",
     "usage": "ls -lh"
   },
   {
     "command": "ls -R",
-    "description": "Menampilkan daftar file secara rekursif hingga ke dalam sub-folder.",
+    "description": "Menampilkan daftar file secara rekursif, yaitu menampilkan isi dari folder saat ini beserta semua sub-foldernya.",
     "category": "File Navigation",
     "usage": "ls -R"
   },
   {
     "command": "ls -S",
-    "description": "Mengurutkan tampilan file berdasarkan ukuran terbesar ke terkecil.",
+    "description": "Mengurutkan tampilan daftar file berdasarkan ukuran file, mulai dari yang terbesar hingga yang terkecil.",
     "category": "File Navigation",
     "usage": "ls -S"
   },
   {
     "command": "ls -t",
-    "description": "Mengurutkan tampilan file berdasarkan waktu modifikasi terbaru.",
+    "description": "Mengurutkan tampilan daftar file berdasarkan waktu modifikasi, menempatkan yang terbaru di posisi paling atas.",
     "category": "File Navigation",
     "usage": "ls -t"
   },
   {
     "command": "ls -1",
-    "description": "Menampilkan daftar file hanya dalam satu kolom vertikal.",
+    "description": "Memaksa output daftar file untuk ditampilkan dalam satu kolom vertikal saja.",
     "category": "File Navigation",
     "usage": "ls -1"
   },
   {
     "command": "cd",
-    "description": "Berpindah direktori kerja ke folder tujuan.",
+    "description": "Berpindah direktori kerja. Gunakan 'cd ..' untuk naik satu tingkat atau 'cd ~' untuk kembali ke home.",
     "category": "File Navigation",
-    "usage": "cd [direktori]"
+    "usage": "cd [jalur_direktori]"
   },
   {
     "command": "pwd",
-    "description": "Menampilkan alamat path lengkap dari direktori saat ini.",
+    "description": "Print Working Directory: Menampilkan jalur (path) absolut dari direktori tempat Anda berada saat ini.",
     "category": "File Navigation",
     "usage": "pwd"
   },
   {
     "command": "mkdir",
-    "description": "Membuat sebuah folder atau direktori baru.",
+    "description": "Membuat satu atau lebih direktori (folder) baru di jalur yang ditentukan.",
     "category": "File Management",
     "usage": "mkdir [nama_folder]"
   },
   {
-    "command": "rm",
-    "description": "Menghapus file atau folder (gunakan -rf untuk menghapus folder beserta isinya).",
+    "command": "touch",
+    "description": "Membuat file baru yang kosong atau memperbarui stempel waktu (timestamp) pada file yang sudah ada.",
     "category": "File Management",
-    "usage": "rm -rf [target]"
+    "usage": "touch [nama_file]"
+  },
+  {
+    "command": "rm",
+    "description": "Menghapus file atau direktori. Gunakan dengan sangat hati-hati karena tidak ada folder sampah di terminal.",
+    "category": "File Management",
+    "usage": "rm [file]"
+  },
+  {
+    "command": "rm -rf",
+    "description": "Menghapus direktori secara paksa dan rekursif beserta seluruh isi di dalamnya secara permanen.",
+    "category": "File Management",
+    "usage": "rm -rf [nama_folder]"
   },
   {
     "command": "cp",
-    "description": "Menyalin file atau direktori ke lokasi lain.",
+    "description": "Menyalin file atau direktori dari lokasi asal ke lokasi tujuan yang ditentukan.",
     "category": "File Management",
     "usage": "cp [asal] [tujuan]"
   },
   {
     "command": "mv",
-    "description": "Memindahkan file atau mengubah nama file/folder.",
+    "description": "Memindahkan file/direktori ke lokasi lain atau mengganti nama (rename) file/direktori tersebut.",
     "category": "File Management",
     "usage": "mv [lama] [baru]"
   },
   {
     "command": "cat",
-    "description": "Menampilkan isi file teks langsung ke terminal.",
+    "description": "Concatenate: Menampilkan seluruh konten teks dari sebuah file langsung ke layar terminal.",
     "category": "File Management",
     "usage": "cat [file]"
   },
   {
     "command": "cat -n",
-    "description": "Menampilkan isi file lengkap dengan nomor baris.",
+    "description": "Menampilkan isi file teks dengan menambahkan nomor baris di setiap awal barisnya.",
     "category": "File Management",
     "usage": "cat -n [file]"
   },
   {
     "command": "cat -b",
-    "description": "Menampilkan nomor baris hanya untuk baris yang berisi teks.",
+    "description": "Menampilkan nomor baris untuk baris yang berisi teks saja (melewati baris kosong).",
     "category": "File Management",
     "usage": "cat -b [file]"
   },
   {
+    "command": "chmod",
+    "description": "Mengubah izin akses file atau direktori (Read, Write, Execute) untuk User, Group, dan Others.",
+    "category": "System Permissions",
+    "usage": "chmod [mode] [file]"
+  },
+  {
+    "command": "chmod +x",
+    "description": "Menambahkan izin eksekusi pada sebuah file agar file tersebut dapat dijalankan sebagai script atau program.",
+    "category": "System Permissions",
+    "usage": "chmod +x [nama_script]"
+  },
+  {
+    "command": "grep",
+    "description": "Mencari string atau pola teks tertentu di dalam file atau dari hasil output perintah lain.",
+    "category": "Text Processing",
+    "usage": "grep \"pencarian\" [file]"
+  },
+  {
+    "command": "find",
+    "description": "Mencari file dan direktori di dalam hierarki sistem berdasarkan berbagai kriteria seperti nama, tipe, atau ukuran.",
+    "category": "File Management",
+    "usage": "find . -name \"*.py\""
+  },
+  {
+    "command": "tar",
+    "description": "Alat manipulasi arsip untuk menggabungkan banyak file menjadi satu file .tar atau mengekstraknya.",
+    "category": "Archiving",
+    "usage": "tar -cvf [arsip.tar] [folder]"
+  },
+  {
+    "command": "tar -xvf",
+    "description": "Mengekstrak isi dari sebuah file arsip .tar atau .tar.gz ke direktori saat ini.",
+    "category": "Archiving",
+    "usage": "tar -xvf [arsip.tar.gz]"
+  },
+  {
+    "command": "zip / unzip",
+    "description": "Kompresi file ke format .zip atau mengekstrak file arsip .zip di terminal.",
+    "category": "Archiving",
+    "usage": "unzip [file.zip]"
+  },
+  {
+    "command": "nano",
+    "description": "Editor teks berbasis terminal yang sangat populer karena kemudahan penggunaannya untuk pemula.",
+    "category": "Editors",
+    "usage": "nano [file]"
+  },
+  {
+    "command": "vim",
+    "description": "Editor teks tingkat lanjut yang sangat efisien dan memiliki fitur lengkap untuk pemrograman.",
+    "category": "Editors",
+    "usage": "vim [file]"
+  },
+  {
     "command": "nano .bashrc",
-    "description": "Mengedit file konfigurasi startup shell Bash untuk alias dan script.",
+    "description": "Membuka file konfigurasi utama shell Bash untuk mengatur alias, variabel environment, dan startup script.",
     "category": "System Configuration",
     "usage": "nano .bashrc"
   },
   {
     "command": "nano .bash_history",
-    "description": "Melihat atau mengedit manual catatan riwayat perintah Bash.",
+    "description": "Membuka file log permanen yang menyimpan catatan seluruh perintah yang pernah Anda ketik di Bash.",
     "category": "History Management",
     "usage": "nano .bash_history"
   },
   {
     "command": "history",
-    "description": "Menampilkan seluruh daftar riwayat perintah yang pernah dijalankan.",
+    "description": "Menampilkan daftar seluruh riwayat perintah yang tersimpan di dalam memori shell saat ini.",
     "category": "History Management",
     "usage": "history"
   },
   {
     "command": "history [n]",
-    "description": "Menampilkan sejumlah [n] perintah terakhir dari riwayat.",
+    "description": "Menampilkan sejumlah [n] baris perintah terakhir yang ada di dalam daftar riwayat.",
     "category": "History Management",
-    "usage": "history 15"
+    "usage": "history 25"
   },
   {
     "command": "history -c",
-    "description": "Membersihkan (clear) seluruh riwayat perintah pada sesi saat ini.",
+    "description": "Membersihkan (clear) seluruh riwayat perintah dari daftar sesi shell yang sedang aktif.",
     "category": "History Management",
     "usage": "history -c"
   },
   {
     "command": "history -d",
-    "description": "Menghapus satu entri riwayat berdasarkan nomor indeks tertentu.",
+    "description": "Menghapus satu entri perintah tertentu dari daftar riwayat berdasarkan nomor indeks barisnya.",
     "category": "History Management",
     "usage": "history -d [nomor]"
   },
   {
     "command": "history -a",
-    "description": "Menambahkan riwayat sesi saat ini ke file penyimpanan riwayat permanen.",
+    "description": "Memaksa shell untuk menulis riwayat dari sesi saat ini ke file penyimpanan riwayat permanen sekarang juga.",
     "category": "History Management",
     "usage": "history -a"
   },
   {
     "command": "history -w",
-    "description": "Menulis riwayat saat ini ke file riwayat (menimpa file lama).",
+    "description": "Menulis riwayat saat ini ke file riwayat dan menimpa konten file tersebut sepenuhnya.",
     "category": "History Management",
     "usage": "history -w"
   },
   {
     "command": "history -r",
-    "description": "Membaca file riwayat dan menambahkannya ke daftar riwayat sesi aktif.",
+    "description": "Membaca file riwayat permanen dan menggabungkannya ke dalam daftar riwayat sesi shell aktif.",
     "category": "History Management",
     "usage": "history -r"
   },
   {
     "command": "history | grep",
-    "description": "Mencari perintah spesifik di dalam riwayat menggunakan filter kata kunci.",
+    "description": "Menggabungkan perintah history dengan grep untuk mencari perintah spesifik yang pernah dijalankan sebelumnya.",
     "category": "History Management",
-    "usage": "history | grep [kata]"
+    "usage": "history | grep \"ssh\""
   },
   {
     "command": "!!",
-    "description": "Menjalankan ulang perintah paling terakhir secara otomatis.",
+    "description": "Singkatan perintah untuk mengeksekusi kembali perintah yang paling terakhir kali dijalankan.",
     "category": "History Management",
     "usage": "!!"
   },
   {
     "command": "!n",
-    "description": "Menjalankan perintah dari riwayat berdasarkan nomor urutan baris.",
+    "description": "Mengeksekusi perintah dari daftar riwayat secara spesifik berdasarkan nomor urutan barisnya.",
     "category": "History Management",
-    "usage": "!50"
+    "usage": "!105"
+  },
+  {
+    "command": "CTRL + R",
+    "description": "Membuka fitur pencarian interaktif riwayat perintah ke belakang (reverse-i-search) secara cepat.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tekan CTRL + R"
   },
   {
     "command": "ps",
-    "description": "Menampilkan status proses yang sedang berjalan pada pengguna saat ini.",
+    "description": "Menampilkan daftar proses yang sedang aktif berjalan di bawah sesi pengguna saat ini.",
     "category": "Process Management",
     "usage": "ps"
   },
   {
     "command": "ps -e",
-    "description": "Menampilkan seluruh proses yang berjalan di dalam sistem.",
+    "description": "Menampilkan informasi tentang setiap proses yang saat ini berjalan di seluruh sistem (identik dengan -A).",
     "category": "Process Management",
     "usage": "ps -e"
   },
   {
     "command": "ps -f",
-    "description": "Menampilkan daftar proses dengan format kolom yang lebih detail.",
+    "description": "Menampilkan daftar proses dengan format kolom penuh yang memberikan detail lebih banyak tentang setiap proses.",
     "category": "Process Management",
     "usage": "ps -f"
   },
   {
     "command": "ps aux",
-    "description": "Menampilkan detail proses semua pengguna termasuk penggunaan CPU/RAM.",
+    "description": "Standar emas untuk melihat detail seluruh proses dari semua user, penggunaan CPU, dan penggunaan RAM.",
     "category": "Process Management",
     "usage": "ps aux"
   },
   {
     "command": "ps -u",
-    "description": "Menampilkan proses yang hanya dimiliki oleh pengguna spesifik.",
+    "description": "Menampilkan daftar proses yang dijalankan oleh pengguna (user) tertentu secara spesifik.",
     "category": "Process Management",
-    "usage": "ps -u [user]"
+    "usage": "ps -u [username]"
   },
   {
     "command": "ps -p",
-    "description": "Menampilkan informasi proses berdasarkan ID Proses (PID) tertentu.",
+    "description": "Menampilkan rincian informasi hanya untuk ID Proses (PID) tertentu yang Anda tentukan.",
     "category": "Process Management",
     "usage": "ps -p [pid]"
   },
   {
     "command": "ps --forest",
-    "description": "Menampilkan struktur pohon proses (induk dan anak proses).",
+    "description": "Menampilkan hubungan hierarki antara proses induk dan anak dalam tampilan grafis pohon (tree view).",
     "category": "Process Management",
     "usage": "ps --forest"
   },
   {
     "command": "jobs",
-    "description": "Menampilkan daftar pekerjaan yang berjalan di latar belakang (background).",
+    "description": "Menampilkan daftar pekerjaan (jobs) yang berjalan di latar belakang (background) pada shell saat ini.",
     "category": "Process Management",
     "usage": "jobs"
   },
   {
     "command": "jobs -l",
-    "description": "Menampilkan daftar pekerjaan beserta PID-nya masing-masing.",
+    "description": "Menampilkan daftar pekerjaan latar belakang lengkap dengan nomor Job ID dan Process ID (PID)-nya.",
     "category": "Process Management",
     "usage": "jobs -l"
   },
   {
     "command": "fg",
-    "description": "Membawa pekerjaan latar belakang kembali ke tampilan utama (foreground).",
+    "description": "Foreground: Memindahkan pekerjaan yang ada di latar belakang kembali ke tampilan utama (depan).",
     "category": "Process Management",
     "usage": "fg %[job_id]"
   },
   {
     "command": "bg",
-    "description": "Melanjutkan pekerjaan yang terhenti agar berjalan di latar belakang.",
+    "description": "Background: Melanjutkan pekerjaan yang sedang ditunda agar tetap berjalan di latar belakang.",
     "category": "Process Management",
     "usage": "bg %[job_id]"
   },
   {
     "command": "kill",
-    "description": "Menghentikan proses dengan mengirimkan sinyal penghentian standar (SIGTERM).",
+    "description": "Mengirim sinyal standar (SIGTERM) ke sebuah proses untuk meminta proses tersebut berhenti secara anggun.",
     "category": "Process Management",
     "usage": "kill [pid]"
   },
   {
     "command": "kill -9",
-    "description": "Menghentikan proses secara paksa (SIGKILL) tanpa menunggu respons aplikasi.",
+    "description": "Mengirim sinyal SIGKILL untuk menghentikan sebuah proses secara paksa dan instan tanpa kompromi.",
     "category": "Process Management",
     "usage": "kill -9 [pid]"
   },
   {
     "command": "kill -l",
-    "description": "Menampilkan daftar seluruh sinyal sistem yang dapat dikirim ke proses.",
+    "description": "Menampilkan daftar seluruh nama dan nomor sinyal sistem yang dapat dikirim melalui perintah kill.",
     "category": "Process Management",
     "usage": "kill -l"
   },
   {
     "command": "killall",
-    "description": "Menghentikan seluruh proses berdasarkan nama aplikasinya.",
+    "description": "Menghentikan seluruh proses yang berjalan berdasarkan nama programnya secara serentak.",
     "category": "Process Management",
-    "usage": "killall [nama]"
+    "usage": "killall [nama_program]"
   },
   {
     "command": "crontab -e",
-    "description": "Membuka editor untuk membuat atau mengubah jadwal tugas berkala.",
+    "description": "Membuka editor teks untuk mengatur, menambah, atau mengubah jadwal tugas otomatis (Cron jobs).",
     "category": "Task Scheduling",
     "usage": "crontab -e"
   },
   {
     "command": "crontab -l",
-    "description": "Melihat daftar tugas terjadwal yang saat ini aktif.",
+    "description": "Menampilkan daftar semua instruksi penjadwalan tugas yang saat ini aktif untuk pengguna.",
     "category": "Task Scheduling",
     "usage": "crontab -l"
   },
   {
     "command": "crontab -r",
-    "description": "Menghapus seluruh jadwal tugas crontab milik pengguna.",
+    "description": "Menghapus seluruh konfigurasi jadwal tugas crontab milik pengguna saat ini secara permanen.",
     "category": "Task Scheduling",
     "usage": "crontab -r"
   },
   {
     "command": "crontab -i",
-    "description": "Meminta konfirmasi sebelum melakukan penghapusan jadwal.",
+    "description": "Memberikan peringatan konfirmasi sebelum menghapus jadwal crontab (digunakan bersama opsi -r).",
     "category": "Task Scheduling",
-    "usage": "crontab -i"
+    "usage": "crontab -i -r"
   },
   {
     "command": "crontab -u",
-    "description": "Mengakses atau mengelola crontab milik pengguna lain (butuh root).",
+    "description": "Mengelola file crontab milik pengguna lain (memerlukan hak akses Root/Sudo).",
     "category": "Task Scheduling",
     "usage": "crontab -u [user] -l"
   },
   {
-    "command": "ssh [user]@[host]",
-    "description": "Melakukan koneksi jarak jauh (remote) ke server menggunakan protokol Secure Shell.",
-    "category": "Networking / SSH",
-    "usage": "ssh user@192.168.1.1"
+    "command": "git clone",
+    "description": "Menduplikasi atau mengunduh seluruh repositori kode dari server remote (seperti GitHub) ke penyimpanan lokal.",
+    "category": "Version Control",
+    "usage": "git clone [url]"
   },
   {
-    "command": "ssh -p [port]",
-    "description": "Melakukan koneksi SSH menggunakan nomor port kustom (default adalah 22).",
-    "category": "Networking / SSH",
-    "usage": "ssh -p 2222 user@host"
+    "command": "df -h",
+    "description": "Menampilkan laporan penggunaan ruang disk pada semua sistem file dalam format yang mudah dibaca.",
+    "category": "System Info",
+    "usage": "df -h"
   },
   {
-    "command": "ssh -i [key]",
-    "description": "Melakukan koneksi SSH menggunakan file kunci privat (Private Key) untuk autentikasi.",
+    "command": "du -sh",
+    "description": "Menghitung dan menampilkan total ukuran disk yang digunakan oleh sebuah direktori atau file tertentu.",
+    "category": "System Info",
+    "usage": "du -sh [target]"
+  },
+  {
+    "command": "whoami",
+    "description": "Menampilkan ID pengguna (username) yang sedang masuk dan mengoperasikan sesi terminal saat ini.",
+    "category": "System Info",
+    "usage": "whoami"
+  },
+  {
+    "command": "uname -a",
+    "description": "Menampilkan rincian lengkap informasi sistem operasi, termasuk nama kernel, versi, dan arsitektur hardware.",
+    "category": "System Info",
+    "usage": "uname -a"
+  },
+  {
+    "command": "uname -m",
+    "description": "Menampilkan secara spesifik arsitektur mesin (hardware) yang digunakan (contoh: aarch64).",
+    "category": "System Info",
+    "usage": "uname -m"
+  },
+  {
+    "command": "ssh",
+    "description": "Membuka koneksi shell aman ke server jarak jauh (remote server) melalui jaringan.",
     "category": "Networking / SSH",
-    "usage": "ssh -i ~/.ssh/id_rsa user@host"
+    "usage": "ssh [user]@[host]"
+  },
+  {
+    "command": "ssh -p",
+    "description": "Menghubungkan ke server SSH menggunakan nomor port tertentu (selain port default 22).",
+    "category": "Networking / SSH",
+    "usage": "ssh -p [port] [user]@[host]"
+  },
+  {
+    "command": "ssh -i",
+    "description": "Menggunakan file kunci privat (Identity File) untuk proses autentikasi ke server remote.",
+    "category": "Networking / SSH",
+    "usage": "ssh -i [jalur_key] [user]@[host]"
   },
   {
     "command": "ssh -L",
-    "description": "Melakukan Local Port Forwarding (meneruskan port dari remote ke local).",
+    "description": "Meneruskan lalu lintas dari port lokal melalui terowongan SSH ke alamat remote yang dituju.",
     "category": "Networking / SSH",
-    "usage": "ssh -L 8080:localhost:80 user@host"
+    "usage": "ssh -L [local_port]:localhost:[remote_port] [user]@[host]"
   },
   {
     "command": "ssh -D",
-    "description": "Membuat SOCKS Proxy dinamis untuk tunneling lalu lintas web melalui server remote.",
+    "description": "Membuat Proxy SOCKS dinamis untuk mengalihkan lalu lintas internet melalui server remote.",
     "category": "Networking / SSH",
-    "usage": "ssh -D 1080 user@host"
+    "usage": "ssh -D [port] [user]@[host]"
   },
   {
     "command": "ssh -v",
-    "description": "Menjalankan SSH dalam mode Verbose untuk melihat rincian proses debug koneksi.",
+    "description": "Menjalankan sesi SSH dalam mode Verbose untuk melihat setiap langkah proses koneksi (sangat membantu untuk debugging).",
     "category": "Networking / SSH",
-    "usage": "ssh -v user@host"
+    "usage": "ssh -v [user]@[host]"
   },
   {
     "command": "ssh-keygen",
-    "description": "Membuat pasangan kunci SSH baru (Public Key & Private Key).",
+    "description": "Menghasilkan pasangan kunci SSH (Public dan Private) baru untuk autentikasi tanpa password.",
     "category": "Networking / SSH",
     "usage": "ssh-keygen -t rsa -b 4096"
   },
   {
     "command": "ssh-copy-id",
-    "description": "Menyalin Public Key ke server remote agar bisa login tanpa password.",
+    "description": "Memasukkan Public Key Anda ke dalam file authorized_keys di server remote agar bisa login otomatis.",
     "category": "Networking / SSH",
-    "usage": "ssh-copy-id user@host"
-  },
-  {
-    "command": "termux-setup-storage",
-    "description": "Inisialisasi akses folder penyimpanan internal Android di Termux.",
-    "category": "System Configuration",
-    "usage": "termux-setup-storage"
-  },
-  {
-    "command": "termux-info",
-    "description": "Menampilkan rincian teknis sistem, arsitektur CPU, dan informasi build.",
-    "category": "Diagnostics",
-    "usage": "termux-info"
-  },
-  {
-    "command": "termux-reload-settings",
-    "description": "Memuat ulang pengaturan UI (seperti file termux.properties).",
-    "category": "System Configuration",
-    "usage": "termux-reload-settings"
-  },
-  {
-    "command": "termux-wake-lock",
-    "description": "Mencegah sistem Android mematikan proses Termux saat layar mati.",
-    "category": "System Control",
-    "usage": "termux-wake-lock"
-  },
-  {
-    "command": "termux-wake-unlock",
-    "description": "Menonaktifkan penguncian CPU sehingga perangkat bisa tidur normal.",
-    "category": "System Control",
-    "usage": "termux-wake-unlock"
-  },
-  {
-    "command": "termux-open",
-    "description": "Membuka file menggunakan aplikasi pendukung di Android.",
-    "category": "Utilities",
-    "usage": "termux-open [file]"
-  },
-  {
-    "command": "termux-open-url",
-    "description": "Membuka alamat web langsung di browser eksternal Android.",
-    "category": "Utilities",
-    "usage": "termux-open-url [url]"
-  },
-  {
-    "command": "chmod",
-    "description": "Mengubah izin akses file atau folder (read, write, execute).",
-    "category": "System Permissions",
-    "usage": "chmod +x [file]"
-  },
-  {
-    "command": "top",
-    "description": "Monitor penggunaan CPU, RAM, dan proses secara real-time.",
-    "category": "Diagnostics",
-    "usage": "top"
-  },
-  {
-    "command": "exit",
-    "description": "Keluar dari sesi terminal shell saat ini.",
-    "category": "System Control",
-    "usage": "exit"
-  },
-  {
-    "command": "q",
-    "description": "Shortcut perintah singkat untuk menutup aplikasi Termux.",
-    "category": "System Control",
-    "usage": "q"
-  },
-  {
-    "command": "clear",
-    "description": "Membersihkan layar terminal dari teks perintah sebelumnya.",
-    "category": "Utilities",
-    "usage": "clear"
-  },
-  {
-    "command": "clear -x",
-    "description": "Membersihkan layar tanpa menghapus cache scroll atas (scrollback).",
-    "category": "Utilities",
-    "usage": "clear -x"
-  },
-  {
-    "command": "bash",
-    "description": "Menjalankan interpreter shell Bash atau script .sh.",
-    "category": "Scripting",
-    "usage": "bash [script.sh]"
-  },
-  {
-    "command": "bash -c",
-    "description": "Menjalankan perintah tunggal langsung melalui argumen Bash.",
-    "category": "Scripting",
-    "usage": "bash -c 'echo Hello'"
-  },
-  {
-    "command": "python",
-    "description": "Interpreter bahasa pemrograman Python.",
-    "category": "Programming",
-    "usage": "python [file.py]"
-  },
-  {
-    "command": "python -m",
-    "description": "Menjalankan modul library Python sebagai script eksekusi.",
-    "category": "Programming",
-    "usage": "python -m pip install [paket]"
-  },
-  {
-    "command": "python -V",
-    "description": "Melihat versi Python yang sedang digunakan.",
-    "category": "Programming",
-    "usage": "python -V"
+    "usage": "ssh-copy-id [user]@[host]"
   },
   {
     "command": "curl",
-    "description": "Alat transfer data dari atau ke server (protokol HTTP, FTP, dll).",
+    "description": "Alat baris perintah untuk mentransfer data dari atau ke server menggunakan berbagai macam protokol.",
     "category": "Networking",
     "usage": "curl [url]"
   },
   {
     "command": "curl -O",
-    "description": "Mengunduh file dan menyimpannya sesuai nama aslinya.",
+    "description": "Mengunduh file dari URL yang diberikan dan menyimpannya ke disk dengan nama asli file tersebut.",
     "category": "Networking",
     "usage": "curl -O [url]"
   },
   {
     "command": "curl -L",
-    "description": "Otomatis mengikuti pengalihan (redirect) jika URL berpindah.",
+    "description": "Memerintahkan curl untuk mengikuti instruksi pengalihan (HTTP Redirect) jika URL tujuan berpindah.",
     "category": "Networking",
     "usage": "curl -L [url]"
   },
   {
     "command": "curl -I",
-    "description": "Hanya menampilkan header informasi dari respon server.",
+    "description": "Mengambil hanya informasi Header HTTP saja dari server tanpa mengunduh konten file seluruhnya.",
     "category": "Networking",
     "usage": "curl -I [url]"
   },
   {
-    "command": "uname",
-    "description": "Menampilkan nama kernel sistem.",
-    "category": "System Information",
-    "usage": "uname"
+    "command": "python",
+    "description": "Interpreter bahasa pemrograman Python untuk menjalankan script atau masuk ke mode interaktif.",
+    "category": "Programming",
+    "usage": "python [file.py]"
   },
   {
-    "command": "uname -a",
-    "description": "Menampilkan informasi sistem operasi secara lengkap.",
-    "category": "System Information",
-    "usage": "uname -a"
+    "command": "python -m",
+    "description": "Menjalankan modul library Python tertentu sebagai script eksekusi (seperti pip atau venv).",
+    "category": "Programming",
+    "usage": "python -m [nama_modul]"
   },
   {
-    "command": "uname -m",
-    "description": "Menampilkan tipe arsitektur perangkat keras mesin.",
-    "category": "System Information",
-    "usage": "uname -m"
+    "command": "python -V",
+    "description": "Menampilkan versi lengkap dari interpreter Python yang sedang aktif digunakan di sistem.",
+    "category": "Programming",
+    "usage": "python -V"
+  },
+  {
+    "command": "bash",
+    "description": "Menjalankan interpreter shell Bash untuk mengeksekusi script shell (.sh) atau memulai sub-shell baru.",
+    "category": "Scripting",
+    "usage": "bash [script.sh]"
+  },
+  {
+    "command": "bash -c",
+    "description": "Menerima string perintah sebagai argumen dan menjalankannya langsung melalui lingkungan Bash.",
+    "category": "Scripting",
+    "usage": "bash -c '[perintah]'"
   },
   {
     "command": "source",
-    "description": "Mengeksekusi file script dalam sesi shell yang sedang aktif.",
+    "description": "Membaca dan menjalankan perintah-perintah dari sebuah file di dalam lingkungan shell yang sedang aktif.",
     "category": "System Configuration",
-    "usage": "source [file]"
+    "usage": "source [nama_file]"
   },
   {
     "command": "ifconfig",
-    "description": "Konfigurasi antarmuka jaringan dan melihat alamat IP perangkat.",
+    "description": "Menampilkan status antarmuka jaringan, alamat IP, alamat MAC, dan statistik transmisi data perangkat.",
     "category": "Networking",
     "usage": "ifconfig"
   },
   {
     "command": "ping",
-    "description": "Menguji koneksi jaringan ke alamat host tujuan.",
+    "description": "Mengirim paket ICMP Echo Request ke host tujuan untuk mengukur latensi dan stabilitas jaringan.",
     "category": "Networking",
     "usage": "ping [host]"
   },
   {
+    "command": "termux-setup-storage",
+    "description": "Memberikan izin akses penyimpanan internal ponsel Android ke lingkungan Termux.",
+    "category": "System Configuration",
+    "usage": "termux-setup-storage"
+  },
+  {
+    "command": "termux-info",
+    "description": "Menampilkan detail laporan teknis tentang versi aplikasi Termux, paket, dan info perangkat.",
+    "category": "Diagnostics",
+    "usage": "termux-info"
+  },
+  {
+    "command": "termux-reload-settings",
+    "description": "Memaksa Termux untuk memuat ulang file properti (.properties) guna menerapkan perubahan tema atau font.",
+    "category": "System Configuration",
+    "usage": "termux-reload-settings"
+  },
+  {
+    "command": "termux-wake-lock",
+    "description": "Mencegah CPU Android masuk ke mode hemat energi (Deep Sleep) saat proses terminal sedang berjalan.",
+    "category": "System Control",
+    "usage": "termux-wake-lock"
+  },
+  {
+    "command": "termux-wake-unlock",
+    "description": "Melepaskan kunci CPU sehingga perangkat dapat kembali ke mode tidur normal untuk menghemat baterai.",
+    "category": "System Control",
+    "usage": "termux-wake-unlock"
+  },
+  {
+    "command": "termux-open",
+    "description": "Membuka file tertentu menggunakan aplikasi eksternal Android yang terinstal di ponsel Anda.",
+    "category": "Utilities",
+    "usage": "termux-open [jalur_file]"
+  },
+  {
+    "command": "termux-open-url",
+    "description": "Membuka tautan web secara otomatis langsung ke browser default sistem Android Anda.",
+    "category": "Utilities",
+    "usage": "termux-open-url [url]"
+  },
+  {
     "command": "CTRL + C",
-    "description": "Mengirim sinyal SIGINT untuk menghentikan paksa (abort) proses yang sedang berjalan di terminal.",
+    "description": "Interrupt: Pintasan untuk segera menghentikan proses atau program yang sedang berjalan di layar utama terminal.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan C"
   },
   {
     "command": "CTRL + Z",
-    "description": "Mengirim sinyal SIGTSTP untuk menunda (suspend) proses yang sedang berjalan ke latar belakang.",
+    "description": "Suspend: Pintasan untuk menghentikan sementara proses dan memindahkannya ke antrean latar belakang.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan Z"
   },
   {
     "command": "CTRL + D",
-    "description": "Mengirim sinyal EOF (End Of File) untuk keluar dari sesi shell saat ini atau logout.",
+    "description": "EOF / Logout: Digunakan untuk menutup sesi shell saat ini atau mengirim sinyal akhir file ke input.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan D"
   },
   {
     "command": "CTRL + L",
-    "description": "Shortcut cepat untuk membersihkan layar terminal (sama dengan perintah 'clear').",
+    "description": "Redraw / Clear: Pintasan keyboard instan untuk membersihkan tampilan layar dari teks perintah sebelumnya.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan L"
   },
   {
-    "command": "CTRL + R",
-    "description": "Memulai pencarian interaktif riwayat perintah ke belakang (reverse search).",
-    "category": "Keyboard Shortcuts",
-    "usage": "Tahan CTRL lalu tekan R"
-  },
-  {
     "command": "CTRL + A",
-    "description": "Memindahkan kursor secara instan ke awal baris perintah yang sedang diketik.",
+    "description": "Home: Memindahkan posisi kursor secara instan ke karakter pertama di baris perintah yang sedang diketik.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan A"
   },
   {
     "command": "CTRL + E",
-    "description": "Memindahkan kursor secara instan ke akhir baris perintah yang sedang diketik.",
+    "description": "End: Memindahkan posisi kursor secara instan ke karakter terakhir di baris perintah yang sedang diketik.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan E"
   },
   {
     "command": "CTRL + U",
-    "description": "Menghapus seluruh teks dari posisi kursor saat ini hingga ke awal baris.",
+    "description": "Kill Line Back: Menghapus seluruh teks di baris perintah mulai dari posisi kursor hingga ke awal baris.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan U"
   },
   {
     "command": "CTRL + K",
-    "description": "Menghapus seluruh teks dari posisi kursor saat ini hingga ke akhir baris.",
+    "description": "Kill Line Forward: Menghapus seluruh teks di baris perintah mulai dari posisi kursor hingga ke akhir baris.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan K"
   },
   {
     "command": "CTRL + W",
-    "description": "Menghapus satu kata tepat sebelum posisi kursor saat ini.",
+    "description": "Kill Word Back: Menghapus tepat satu kata yang berada sebelum posisi kursor saat ini.",
     "category": "Keyboard Shortcuts",
     "usage": "Tahan CTRL lalu tekan W"
   },
   {
     "command": "TAB",
-    "description": "Otomatis melengkapi (autocomplete) nama perintah, file, atau direktori yang sedang diketik.",
+    "description": "Autocomplete: Menekan tombol ini akan secara otomatis melengkapi nama file, folder, atau perintah.",
     "category": "Keyboard Shortcuts",
-    "usage": "Tekan tombol TAB"
+    "usage": "Tekan tombol TAB sekali"
+  },
+  {
+    "command": "TAB (Double)",
+    "description": "List Alternatives: Menekan tombol ini dua kali akan menampilkan semua kemungkinan nama yang sesuai dengan awalan ketikan.",
+    "category": "Keyboard Shortcuts",
+    "usage": "Tekan tombol TAB dua kali"
   },
   {
     "command": "ESC + [n]",
-    "description": "Mengakses baris perintah spesifik dengan navigasi cepat (tergantung konfigurasi terminal).",
+    "description": "Membuka navigasi cepat atau kontrol baris perintah tambahan (tergantung pada jenis shell yang digunakan).",
     "category": "Keyboard Shortcuts",
-    "usage": "Tekan ESC lalu angka"
+    "usage": "Tekan ESC lalu angka [n]"
+  },
+  {
+    "command": "top",
+    "description": "Menampilkan daftar proses sistem yang sedang berjalan secara dinamis dan real-time.",
+    "category": "Diagnostics",
+    "usage": "top"
+  },
+  {
+    "command": "clear",
+    "description": "Membersihkan tampilan layar terminal sepenuhnya dari output perintah yang sudah lewat.",
+    "category": "Utilities",
+    "usage": "clear"
+  },
+  {
+    "command": "clear -x",
+    "description": "Membersihkan layar terminal tanpa menghapus data yang ada di dalam buffer scroll ke atas.",
+    "category": "Utilities",
+    "usage": "clear -x"
+  },
+  {
+    "command": "exit",
+    "description": "Mengakhiri sesi shell saat ini dan menutup jendela terminal.",
+    "category": "System Control",
+    "usage": "exit"
+  },
+  {
+    "command": "q",
+    "description": "Perintah alias singkat yang umum digunakan untuk mematikan sesi atau keluar dari program.",
+    "category": "System Control",
+    "usage": "q"
   }
 ]
