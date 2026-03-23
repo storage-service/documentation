@@ -1,62 +1,152 @@
 [
   {
     "command": "pkg help",
-    "description": "Menampilkan bantuan untuk manajer paket Termux.",
+    "description": "Menampilkan ringkasan bantuan dan daftar sub-perintah untuk manajer paket Termux.",
     "category": "Package Management",
     "usage": "pkg help"
   },
   {
+    "command": "pkg install",
+    "description": "Mengunduh dan menginstal paket baru dari repositori resmi.",
+    "category": "Package Management",
+    "usage": "pkg install [nama_paket]"
+  },
+  {
+    "command": "pkg update",
+    "description": "Memperbarui daftar paket yang tersedia dari repositori.",
+    "category": "Package Management",
+    "usage": "pkg update"
+  },
+  {
     "command": "pkg upgrade",
-    "description": "Memperbarui semua paket yang terinstal ke versi terbaru.",
+    "description": "Memperbarui semua paket yang terinstal ke versi terbaru yang tersedia.",
     "category": "Package Management",
     "usage": "pkg upgrade"
   },
   {
+    "command": "pkg list-all",
+    "description": "Menampilkan daftar seluruh paket yang tersedia di repositori Termux.",
+    "category": "Package Management",
+    "usage": "pkg list-all"
+  },
+  {
+    "command": "pkg list-installed",
+    "description": "Menampilkan daftar paket yang saat ini terinstal di sistem.",
+    "category": "Package Management",
+    "usage": "pkg list-installed"
+  },
+  {
+    "command": "pkg search",
+    "description": "Mencari paket tertentu berdasarkan nama atau deskripsi.",
+    "category": "Package Management",
+    "usage": "pkg search [query]"
+  },
+  {
+    "command": "pkg uninstall",
+    "description": "Menghapus paket yang terinstal dari sistem.",
+    "category": "Package Management",
+    "usage": "pkg uninstall [nama_paket]"
+  },
+  {
     "command": "termux-setup-storage",
-    "description": "Memberikan akses penyimpanan internal ponsel ke Termux.",
-    "category": "System",
+    "description": "Memberikan izin dan membuat shortcut ke folder penyimpanan internal ponsel ($HOME/storage).",
+    "category": "System Configuration",
     "usage": "termux-setup-storage"
   },
   {
-    "command": "apt update",
-    "description": "Sinkronisasi indeks paket dari repositori.",
-    "category": "Package Management",
-    "usage": "apt update"
+    "command": "termux-info",
+    "description": "Menampilkan informasi teknis tentang sistem Termux, perangkat, dan paket yang terinstal.",
+    "category": "Diagnostics",
+    "usage": "termux-info"
+  },
+  {
+    "command": "termux-reload-settings",
+    "description": "Memuat ulang konfigurasi Termux (seperti font atau warna) tanpa harus menutup aplikasi.",
+    "category": "System Configuration",
+    "usage": "termux-reload-settings"
+  },
+  {
+    "command": "termux-wake-lock",
+    "description": "Mencegah CPU ponsel masuk ke mode tidur (sleep) agar proses latar belakang tetap berjalan.",
+    "category": "System Control",
+    "usage": "termux-wake-lock"
+  },
+  {
+    "command": "termux-wake-unlock",
+    "description": "Melepaskan penguncian CPU sehingga ponsel bisa kembali ke mode tidur normal.",
+    "category": "System Control",
+    "usage": "termux-wake-unlock"
+  },
+  {
+    "command": "termux-open",
+    "description": "Membuka file menggunakan aplikasi Android eksternal yang sesuai.",
+    "category": "Utilities",
+    "usage": "termux-open [jalur_file]"
+  },
+  {
+    "command": "termux-open-url",
+    "description": "Membuka URL (tautan web) langsung ke browser default Android.",
+    "category": "Utilities",
+    "usage": "termux-open-url [url]"
   },
   {
     "command": "ls",
-    "description": "Menampilkan daftar file dan direktori.",
-    "category": "Navigation",
+    "description": "Menampilkan daftar file dan direktori dalam folder kerja saat ini.",
+    "category": "File Navigation",
     "usage": "ls -la"
   },
   {
     "command": "cd",
-    "description": "Berpindah direktori kerja.",
-    "category": "Navigation",
-    "usage": "cd [nama_folder]"
+    "description": "Berpindah dari satu direktori ke direktori lainnya.",
+    "category": "File Navigation",
+    "usage": "cd [nama_direktori]"
+  },
+  {
+    "command": "pwd",
+    "description": "Menampilkan jalur lengkap (path) dari direktori kerja saat ini.",
+    "category": "File Navigation",
+    "usage": "pwd"
+  },
+  {
+    "command": "mkdir",
+    "description": "Membuat direktori atau folder baru.",
+    "category": "File Management",
+    "usage": "mkdir [nama_folder]"
+  },
+  {
+    "command": "rm",
+    "description": "Menghapus file atau direktori secara permanen.",
+    "category": "File Management",
+    "usage": "rm -rf [nama_file_atau_folder]"
+  },
+  {
+    "command": "cp",
+    "description": "Menyalin file atau direktori ke lokasi lain.",
+    "category": "File Management",
+    "usage": "cp [asal] [tujuan]"
+  },
+  {
+    "command": "mv",
+    "description": "Memindahkan atau mengubah nama file dan direktori.",
+    "category": "File Management",
+    "usage": "mv [lama] [baru]"
+  },
+  {
+    "command": "chmod",
+    "description": "Mengubah izin akses (read, write, execute) pada suatu file.",
+    "category": "System Permissions",
+    "usage": "chmod +x [nama_file]"
   },
   {
     "command": "top",
-    "description": "Menampilkan proses sistem yang sedang berjalan secara real-time.",
-    "category": "System",
+    "description": "Menampilkan daftar proses sistem yang berjalan dan penggunaan sumber daya secara real-time.",
+    "category": "Diagnostics",
     "usage": "top"
   },
   {
-    "command": "whoami",
-    "description": "Menampilkan nama user yang sedang login.",
-    "category": "System",
-    "usage": "whoami"
-  },
-  {
-    "command": "ifconfig",
-    "description": "Melihat konfigurasi antarmuka jaringan (IP, MAC, dll).",
-    "category": "Network",
-    "usage": "ifconfig"
-  },
-  {
-    "command": "ping",
-    "description": "Menguji konektivitas jaringan ke host tertentu.",
-    "category": "Network",
-    "usage": "ping google.com"
+    "command": "exit",
+    "description": "Menutup sesi terminal atau keluar dari shell saat ini.",
+    "category": "System Control",
+    "usage": "exit"
   }
 ]
