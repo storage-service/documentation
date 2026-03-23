@@ -148,5 +148,41 @@
     "description": "Menutup sesi terminal atau keluar dari shell saat ini.",
     "category": "System Control",
     "usage": "exit"
+  },
+  {
+    "command": "history",
+    "description": "Menampilkan daftar seluruh perintah yang pernah diketik sebelumnya di terminal.",
+    "category": "History Management",
+    "usage": "history"
+  },
+  {
+    "command": "history -c",
+    "description": "Menghapus seluruh daftar riwayat perintah dalam sesi shell saat ini.",
+    "category": "History Management",
+    "usage": "history -c"
+  },
+  {
+    "command": "history -d",
+    "description": "Menghapus entri spesifik dari daftar riwayat berdasarkan nomor baris.",
+    "category": "History Management",
+    "usage": "history -d [nomor_baris]"
+  },
+  {
+    "command": "!!",
+    "description": "Menjalankan kembali perintah yang terakhir kali diketik secara instan.",
+    "category": "History Management",
+    "usage": "!!"
+  },
+  {
+    "command": "!n",
+    "description": "Menjalankan perintah tertentu dari daftar riwayat berdasarkan nomor urutnya.",
+    "category": "History Management",
+    "usage": "![nomor_urutan]"
+  },
+  {
+    "command": "CTRL + R",
+    "description": "Mencari perintah lama di riwayat secara interaktif (reverse search).",
+    "category": "History Management",
+    "usage": "Tahan CTRL lalu tekan R"
   }
 ]
